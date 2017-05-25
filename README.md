@@ -10,7 +10,7 @@ Repeat until have k orthogonal lines
 
 The projected position of a point on these lines gives the coordinates in the k-dimensional reduced space
 
-## steps in pca
+## Steps in pca
 1.Mean center the data
 
 
@@ -29,11 +29,18 @@ The projected position of a point on these lines gives the coordinates in the k-
 
 8.Projection of original data onto first k PCs gives a reduced dimensionality representation of the data.
 
-#T-SNE
+# T-SNE
 
 Visualizes high-dimensional data in a 2- or 3-dimensional map.
 Better than existing techniques at creating a single map that reveals structure at many different scales.
 Particularly good for high-dimensional data that lie on several different, but related, low-dimensional manifolds.
-Example: images of objects from multiple classes seen from multiple viewpoints.
+
+## Steps in T-sne
+
+The t-SNE algorithm comprises two main stages.
+
+1. t-SNE constructs a probability distribution over pairs of high-dimensional objects in such a way that similar objects have a high probability of being picked, whilst dissimilar points have an extremely small probability of being picked. 
+2. t-SNE defines a similar probability distribution over the points in the low-dimensional map, and it minimizes the Kullback–Leibler divergence between the two distributions with respect to the locations of the points in the map. Note that whilst the original algorithm uses the Euclidean distance between objects as the base of its similarity metric, this should be changed as appropriate.
+
 
  
